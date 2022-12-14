@@ -110,7 +110,7 @@
             android:layout_marginBottom="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="https://github.com/dmeiei/SW_CapstoneDesign_Team_Magnifier"
+            android:text="https://github.com/dmeiei/Smart_Portfolio/tree/master"
             android:autoLink="web"/>
 
 
