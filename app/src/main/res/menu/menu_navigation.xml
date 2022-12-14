@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profile"
+        android:icon="@drawable/profile"
+        android:title="User"/>
+
+    <item
+        android:id="@+id/navProject"
+        android:icon="@drawable/book"
+        android:title="Project"/>
+
+
+    <item
+        android:id="@+id/github"
+        android:icon="@drawable/github"
+        android:title="Github"/>
+
+
+    <item
+        android:id="@+id/logout"
+        android:icon="@drawable/logout"
+        android:title="Logout"/>
+
+
+</menu>

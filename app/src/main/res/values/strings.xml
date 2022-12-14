@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">스마트 포트폴리오</string>
+    <string name="drawer_opened">Opened Drawer</string>
+    <string name="drawer_closed">Closed Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="info">
+        안녕하세요! 현재 Android를 배우고 있는 개발자 이승현입니다. \n다양한 앱들을 개발해 보는 것이 목표이며 주로 Kotlin을 사용합니다.\n다양한 기능들을 구현 해 보며 공부하고 있습니다.
+    </string>
+
+    <string name="project1">
+        시니어를 위한 디지털 도우미 앱
+    </string>
+
+    <string name="project2">
+        포트폴리오 앱
+    </string>
+
+    //프로젝트 1
+    <string name="project1_1">스마트폰 사용에 어려움을 느끼시는 어르신들을 위한 기능들을 모아 놓은 통합 앱</string>
+    <string name="project1_2"> - 연락처\n 핸드폰에 저장된 연락처를 큰 글씨로 가져온 전화번호부\n\n
+        - 돋보기\n cameraX를 사용한 퐐영과 줌이 가능한 돋보기\n\n
+        - 미니게임\n 기억력 증진에 도움이 되는 같은그림찾기, 숫자순서대로누르기, 숫자맞추기, 색깔맞추기 게임\n\n
+        - 설명서\n 휴대폰에 있는 기능들과 앱의 사용 설명서\n\n
+        - 플래시\n 휴대폰 후면 카메라의 플래시를 이용한 손전등</string>
+
+    //프로젝트2
+    <string name="project2_1">모바일 프로그래밍 스마트 포트폴리오 기말 프로젝트</string>
+    <string name="project2_2"> - 홈\n 자기소개와 정보\n\n
+        - 프로젝트\n 안드로이드 앱 관련 프로젝트\n\n
+        - 깃허브\n 웹뷰를 이용해 깃허브 화면을 보여줌\n\n
+        - 유저정보\n 회원가입할 때 입력한 유저 정보를 보여줌
+    </string>
+</resources>
