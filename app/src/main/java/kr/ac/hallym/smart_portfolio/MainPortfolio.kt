@@ -18,9 +18,8 @@ import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import kr.ac.hallym.smart_portfolio.databinding.ActivityMainPortfolioBinding
 
-class MainPortfolio : AppCompatActivity(),NavigationView.OnNavigationItemSelectedListener {
+class MainPortfolio : AppCompatActivity() {
     lateinit var binding :ActivityMainPortfolioBinding
-    lateinit var toggle: ActionBarDrawerToggle
 
     //fragment
     private val fragmenthome by lazy { homeFragment() }
@@ -36,8 +35,7 @@ class MainPortfolio : AppCompatActivity(),NavigationView.OnNavigationItemSelecte
 
         //custom toolbar 사용
         setSupportActionBar(binding.mainToolbar)
-        //툴바 버튼생성
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         //툴바 기본 title 사용 x
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
@@ -46,61 +44,8 @@ class MainPortfolio : AppCompatActivity(),NavigationView.OnNavigationItemSelecte
 
 
 
-        //드로워메뉴
-        toggle = ActionBarDrawerToggle(this, binding.drawer, R.string.drawer_opened,
-            R.string.drawer_closed)
-        toggle.syncState()
-
-
-        binding.mainDrawerView.setNavigationItemSelectedListener(this)
-
-
-
     }
 
-    //toggle 버튼 클릭
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (toggle.onOptionsItemSelected(item)){
-            return true
-        }
-        return super.onOptionsItemSelected(item)
-
-    }
-
-    //navigation menu 클릭
-    override fun onNavigationItemSelected(item: MenuItem):Boolean{
-        when(item.itemId){
-            R.id.profile -> {
-                val intent = Intent(this,UserSetting::class.java)
-                startActivity(intent)
-            }
-
-            R.id.navProject ->{
-                val intent = Intent(this,ProjectActivity::class.java)
-                startActivity(intent)
-            }
-            R.id.github ->{
-                val intent = Intent(this,GithubActivity::class.java)
-                startActivity(intent)
-            }
-
-            R.id.logout ->{
-                FirebaseAuth.getInstance().signOut()
-                startActivity(Intent(this,login_form::class.java))
-                finish()
-            }
-        }
-        return false
-    }
-
-    //뒤로가기 버튼 클릭시 앱 종료 방지
-    override fun onBackPressed() {
-        if(binding.drawer.isDrawerOpen(GravityCompat.START)){
-            binding.drawer.closeDrawer(GravityCompat.START)
-        }else{
-            super.onBackPressed()
-        }
-    }
 
     //bottom navigation 바
     private fun initNavigationBar(){
@@ -113,7 +58,7 @@ class MainPortfolio : AppCompatActivity(),NavigationView.OnNavigationItemSelecte
                     R.id.second ->{
                         changeFragment(fragmentproject)
                     }
-                    R.id.third ->{
+                    R.id.five ->{
                         changeFragment(UserFragment())
                     }
                 }
