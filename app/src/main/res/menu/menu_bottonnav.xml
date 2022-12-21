@@ -11,19 +11,26 @@
     <item
         android:id="@+id/second"
         app:showAsAction="ifRoom"
+        android:enabled="true"
         android:icon="@drawable/book"
         android:title="Project" />
     <item
         android:id="@+id/third"
         app:showAsAction="ifRoom"
         android:enabled="true"
+        android:icon="@drawable/profile"
+        android:title="Study" />
+    <item
+        android:id="@+id/four"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
+        android:icon="@drawable/github"
+        android:title="Github" />
+    <item
+        android:id="@+id/five"
+        app:showAsAction="ifRoom"
+        android:enabled="true"
         android:icon="@drawable/user"
         android:title="User" />
-<!--    <item-->
-<!--        android:id="@+id/four"-->
-<!--        app:showAsAction="ifRoom"-->
-<!--        android:enabled="true"-->
-<!--        android:icon="@drawable/user"-->
-<!--        android:title="User" />-->
 
 </menu>
