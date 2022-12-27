@@ -17,7 +17,7 @@ class IntroActivity : AppCompatActivity() {
 
         //1초 실행
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this,login_form::class.java)
+            val intent = Intent(this, login_form::class.java)
             startActivity(intent)
             finish()
         },1500L)

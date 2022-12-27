@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
@@ -17,6 +18,8 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.auth.FirebaseAuth
 import kr.ac.hallym.smart_portfolio.databinding.ActivityMainPortfolioBinding
+import kr.ac.hallym.smart_portfolio.portfolio.homeFragment
+import kr.ac.hallym.smart_portfolio.study.StudyFragment
 
 class MainPortfolio : AppCompatActivity() {
     lateinit var binding :ActivityMainPortfolioBinding
@@ -58,6 +61,12 @@ class MainPortfolio : AppCompatActivity() {
                     R.id.second ->{
                         changeFragment(fragmentproject)
                     }
+                    R.id.third->{
+                        changeFragment(StudyFragment())
+                    }
+                    R.id.four ->{
+                        changeFragment(GithubFragment())
+                    }
                     R.id.five ->{
                         changeFragment(UserFragment())
                     }
@@ -74,6 +83,23 @@ class MainPortfolio : AppCompatActivity() {
             .beginTransaction()
             .replace(R.id.fl_container,fragment)
             .commit()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_addtitle,menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item!!.itemId){
+            R.id.menu_logout ->{
+                FirebaseAuth.getInstance().signOut()
+                val intent = Intent(applicationContext,login_form::class.java)
+                startActivity(intent)
+                finish()
+            }
+        }
+        return super.onOptionsItemSelected(item)
     }
 
 }

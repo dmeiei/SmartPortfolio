@@ -95,7 +95,6 @@ class UserFragment : Fragment() {
 
             databaseReference.child(uid).addValueEventListener(object : ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
-
                     user = snapshot.getValue(UserModel::class.java)!!
                     Log.d("kkang","$user")
                     uname.setText(user.name)
@@ -110,9 +109,6 @@ class UserFragment : Fragment() {
                 }
             })
         }
-
         return view
     }
-
-
 }

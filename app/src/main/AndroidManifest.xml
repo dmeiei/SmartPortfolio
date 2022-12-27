@@ -15,6 +15,48 @@
         android:theme="@style/Theme.Smart_Portfolio"
         tools:targetApi="31">
         <activity
+            android:name=".GithubFragment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".portfolio.updateProfile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".portfolio.PortfolioAddActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".study.DetailActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".study.StudyAddActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+<!--        <activity-->
+<!--            android:name=".study.StudyActivity"-->
+<!--            android:exported="false">-->
+<!--            <meta-data-->
+<!--                android:name="android.app.lib_name"-->
+<!--                android:value="" />-->
+<!--        </activity>-->
+        <activity
             android:name=".ProjectTwo"
             android:exported="false">
             <meta-data
@@ -106,8 +148,7 @@
             android:exported="false" />
         <activity
             android:name=".login_form"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

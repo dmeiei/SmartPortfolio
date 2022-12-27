@@ -5,12 +5,13 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
 import kr.ac.hallym.smart_portfolio.databinding.ActivityUserInfoBinding
+import kr.ac.hallym.smart_portfolio.login_form
+import kr.ac.hallym.smart_portfolio.study.InfoModel
 
 class UserInfoActivity : AppCompatActivity() {
 
@@ -19,6 +20,8 @@ class UserInfoActivity : AppCompatActivity() {
     private lateinit var database: FirebaseDatabase
     private lateinit var storage: FirebaseStorage
     private lateinit var selectedImg : Uri
+    private lateinit var info : InfoModel
+    private lateinit var uid: String
 //    private lateinit var dialog: AlertDialog.Builder
 
     private lateinit var reference: StorageReference
@@ -86,7 +89,7 @@ class UserInfoActivity : AppCompatActivity() {
             .child(auth.uid.toString())
             .setValue(user)
             .addOnSuccessListener {
-                val intent = Intent(this,login_form::class.java)
+                val intent = Intent(this, login_form::class.java)
                 startActivity(intent)
                 finish()
             }

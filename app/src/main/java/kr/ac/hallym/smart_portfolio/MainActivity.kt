@@ -1,6 +1,5 @@
 package kr.ac.hallym.smart_portfolio
 
-import android.content.ContentValues
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -9,6 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.firebase.auth.FirebaseAuth
 import kr.ac.hallym.smart_portfolio.databinding.ActivityMainBinding
+import kr.ac.hallym.smart_portfolio.login_form
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding : ActivityMainBinding
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
 
         //회원가입창으로 이동
         binding.loginLink.setOnClickListener {
-            val intent = Intent(this,login_form::class.java)
+            val intent = Intent(this, login_form::class.java)
             startActivity(intent)
         }
 

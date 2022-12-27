@@ -58,7 +58,7 @@
                 android:textSize="17dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_marginBottom="10dp"
@@ -74,11 +74,10 @@
                 android:textSize="17dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_marginBottom="10dp"
-                android:text="userEmail"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:id="@+id/email_edit"/>
@@ -95,7 +94,6 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_marginBottom="10dp"
-                android:text="phone_num"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:id="@+id/phoneNum_edit"/>
@@ -108,13 +106,26 @@
                 android:textSize="17dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:text="user_address"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 android:id="@+id/address_edit"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="수정"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/teal_200"
+                android:id="@+id/profile_editBtn"/>
 
 
         </LinearLayout>

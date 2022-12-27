@@ -7,6 +7,8 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import com.google.firebase.auth.FirebaseAuth
+import kr.ac.hallym.smart_portfolio.MainActivity
+import kr.ac.hallym.smart_portfolio.SplashActivity
 import kr.ac.hallym.smart_portfolio.databinding.ActivityLoginFormBinding
 
 class login_form : AppCompatActivity() {
@@ -26,7 +28,7 @@ class login_form : AppCompatActivity() {
 
         //회원가입창으로 이동
         binding.regisLink.setOnClickListener {
-            val intent = Intent(this,MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
 
@@ -39,7 +41,7 @@ class login_form : AppCompatActivity() {
 
                 firebaseAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener{
                     if (it.isSuccessful){
-                        val intent = Intent(this,SplashActivity::class.java)
+                        val intent = Intent(this, SplashActivity::class.java)
                         startActivity(intent)
                         finish()
                     }else{
@@ -60,7 +62,7 @@ class login_form : AppCompatActivity() {
         super.onStart()
 
         if (firebaseAuth.currentUser != null){
-            val intent = Intent(this,SplashActivity::class.java)
+            val intent = Intent(this, SplashActivity::class.java)
             startActivity(intent)
             finish()
         }
